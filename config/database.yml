@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: yuvraj
+  password: yuvraj123
+  host: localhost
+
+development:
+  <<: *default
+  database: task_manager_development
+
+test:
+  <<: *default
+  database: task_manager_test
+
+production:
+  <<: *default
+  database: task_manager_production
